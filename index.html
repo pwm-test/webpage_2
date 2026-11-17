@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="慢生活笔记：记录日常里值得停留的小事。">
+  <title>日常之间 · 慢生活笔记</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #faf6ef; color: #332c28; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.8; }
+    .wrap { width: min(1080px, calc(100% - 48px)); margin: auto; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 26px 0; border-bottom: 1px solid #ded5c9; }
+    .logo { font-weight: 750; font-size: 20px; letter-spacing: .1em; }
+    a { color: inherit; text-underline-offset: 6px; }
+    header a { font-size: 14px; }
+    a:focus-visible { outline: 3px solid #bd4e33; outline-offset: 6px; }
+    .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; padding: 80px 0; }
+    .label { color: #a44b32; font-size: 12px; letter-spacing: .15em; font-weight: 700; }
+    h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.25; margin: 20px 0; letter-spacing: -.04em; }
+    .lead { max-width: 420px; color: #75695e; }
+    .button { display: inline-block; background: #b54e33; color: #fff; border-radius: 28px; padding: 11px 24px; text-decoration: none; margin-top: 20px; }
+    .button:hover { background: #943c25; }
+    .art { position: relative; height: 360px; overflow: hidden; border-radius: 180px 180px 8px 8px; background: #ecdac2; }
+    .sun { position: absolute; width: 112px; height: 112px; border-radius: 50%; background: #c85f3e; top: 55px; right: 48px; }
+    .hill { position: absolute; width: 140%; height: 220px; border-radius: 50% 50% 0 0; background: #9b9d7d; bottom: -85px; left: -60px; transform: rotate(-16deg); }
+    .hill.front { background: #566d59; bottom: -132px; left: 30px; transform: rotate(14deg); }
+    #notes { padding: 20px 0 72px; scroll-margin-top: 24px; }
+    .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 1px solid #ded5c9; padding-bottom: 18px; }
+    h2 { margin: 0; font-size: 24px; }
+    .section-head span { font-size: 12px; color: #75695e; }
+    .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 28px; }
+    article .number { color: #a44b32; font-size: 13px; }
+    h3 { font-size: 21px; margin: 12px 0 10px; }
+    article p { color: #75695e; font-size: 15px; margin: 0; }
+    footer { border-top: 1px solid #ded5c9; padding: 22px 0; font-size: 12px; color: #75695e; }
+    @media (max-width: 700px) { .hero { grid-template-columns: 1fr; gap: 36px; padding: 48px 0; } .art { height: 260px; border-radius: 140px 140px 8px 8px; } .notes { grid-template-columns: 1fr; gap: 26px; } .wrap { width: calc(100% - 36px); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">日常之间<span style="color:#b54e33">.</span></div>
+      <nav aria-label="主导航"><a href="#notes">阅读笔记 ↗</a></nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <p class="label">LITTLE MOMENTS / 慢生活笔记</p>
+          <h1 id="title">把日子放慢，<br>让美好发生。</h1>
+          <p class="lead">一杯热茶，一段散步，一页没读完的书。记录那些平凡，却值得停留的瞬间。</p>
+          <a class="button" href="#notes">翻开日常笔记 ↓</a>
+        </div>
+        <div class="art" role="img" aria-label="暖色落日与层叠的绿色山丘插画">
+          <div class="sun"></div><div class="hill"></div><div class="hill front"></div>
+        </div>
+      </section>
+      <section id="notes" aria-labelledby="notes-title">
+        <div class="section-head"><h2 id="notes-title">生活的小片段</h2><span>三则示例随笔</span></div>
+        <div class="notes">
+          <article><span class="number">01 / 清晨</span><h3>从一杯热茶开始</h3><p>水汽缓缓升起，窗外的光落在桌面上。暂时不看消息，给自己十分钟，安静地迎接今天。</p></article>
+          <article><span class="number">02 / 午后</span><h3>走一条没走过的路</h3><p>转过熟悉的街角，发现一家小店、一棵树，还有墙边晒太阳的猫。偶尔绕路，也有新的风景。</p></article>
+          <article><span class="number">03 / 夜晚</span><h3>留一页给自己</h3><p>睡前写下今天的一件小事。不必精彩，也不必完整，只是把普通的一天，轻轻收藏起来。</p></article>
+        </div>
+      </section>
+    </main>
+    <footer>日常之间 · 留意生活里的小美好。</footer>
+  </div>
+</body>
+</html>
